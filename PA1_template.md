@@ -155,9 +155,7 @@ Finally, we will look at a time series panel plot showing the average steps take
 
 
 ```r
-p<-ggplot(IntAvgWeekday, aes(interval, steps)) + geom_line(color="white",size=1) + facet_grid(dayofweek ~ .) + theme_dark()
-
-p
+ggplot(IntAvgWeekday, aes(interval, steps)) + geom_line(color="white",size=1) + facet_grid(dayofweek ~ .) + theme_dark()
 ```
 
 ![](PA1_template_files/figure-html/weekdays time series-1.png)<!-- -->

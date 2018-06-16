@@ -107,8 +107,5 @@ IntAvgWeekday <- activityNoNA %>% group_by(interval,dayofweek) %>% summarize(ste
 Finally, we will look at a time series panel plot showing the average steps taken in each 5 minute interval, separately for both weekdays and weekend days.
 
 ```{r weekdays time series}
-
-p<-ggplot(IntAvgWeekday, aes(interval, steps)) + geom_line(color="white",size=1) + facet_grid(dayofweek ~ .) + theme_dark()
-
-p
+ggplot(IntAvgWeekday, aes(interval, steps)) + geom_line(color="white",size=1) + facet_grid(dayofweek ~ .) + theme_dark()
 ```
